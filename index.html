@@ -11,6 +11,7 @@
    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
    crossorigin="anonymous"
   />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Bootcamp</title>
  </head>
  <body>
@@ -47,7 +48,9 @@
   </nav>
 
   <!-- Showcase -->
-  <section class="bg-dark text-light p-5 text-center text-sm-start">
+  <section
+   class="bg-dark text-light p-5 p-md-0 pt-md-5 text-center text-sm-start"
+  >
    <div class="container">
     <div class="d-sm-flex align-items-center justify-content-between">
      <div>
@@ -66,6 +69,21 @@
       src="img/showcase.svg"
       alt="showcase"
      />
+    </div>
+   </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="bg-primary text-light p-5">
+   <div class="container">
+    <div class="d-md-flex justify-content-between align-content-center">
+     <h3 class="mb-3 mb-md-0">Sign Up For Our Newsletter</h3>
+
+     <div class="input-group news-input">
+      <input type="text" class="form-control" placeholder="Enter Email" />
+
+      <button class="btn btn-dark btn-lg" type="button">Button</button>
+     </div>
     </div>
    </div>
   </section>

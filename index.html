@@ -15,6 +15,10 @@
    rel="stylesheet"
    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
   />
+  <link
+   href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"
+   rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
   <title>Frontend Bootcamp</title>
  </head>
@@ -495,11 +499,61 @@
    </div>
   </section>
 
+  <!-- Contact & Map -->
+  <section class="p-5">
+   <div class="container">
+    <div class="row g-4">
+     <div class="col-md">
+      <h2 class="text-center mb-4">Contact Info</h2>
+
+      <ul class="list-group list-group-flush lead">
+       <li class="list-group-item">
+        <span class="fw-bold">Main Location: </span> 50 Main st Boston MA
+       </li>
+
+       <li class="list-group-item">
+        <span class="fw-bold">Enrollment Phone: </span> (555) 555-5555
+       </li>
+
+       <li class="list-group-item">
+        <span class="fw-bold">Student Phone: </span> (333) 333-3333
+       </li>
+
+       <li class="list-group-item">
+        <span class="fw-bold">Enrollment Email: </span> enroll@frontend.com
+       </li>
+
+       <li class="list-group-item">
+        <span class="fw-bold">Student Email: </span> student@frontend.com
+       </li>
+      </ul>
+     </div>
+
+     <div class="col-md">
+      <div id="map"></div>
+     </div>
+    </div>
+   </div>
+  </section>
+
   <!-- JavaScript Bundle with Popper -->
   <script
    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
    crossorigin="anonymous"
   ></script>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+
+  <script>
+   mapboxgl.accessToken =
+    'pk.eyJ1Ijoid2Vicm9rZXIiLCJhIjoiY2wyNzkycDZmMDF2eDNncWx6dWR4czE2bCJ9.Mt1zf8QVuUDuH1pqtUTMgg';
+   const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [34.8881, 31.951], // starting position [lng, lat]
+    zoom: 10, // starting zoom
+   });
+  </script>
  </body>
 </html>
